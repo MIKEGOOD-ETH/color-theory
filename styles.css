@@ -1,0 +1,133 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1F1D29;
+    color: #EFF2FA;
+    line-height: 1.6;
+}
+
+
+body h1 {
+    font-size: 3rem;
+}
+
+    .header {
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 0;
+    max-width: 800px;
+    margin: 0 auto; 
+    font-size: 1.5rem;
+}
+
+    .header-2 {
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto; 
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: underline; 
+    color: inherit; 
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.palette {
+    flex-basis: calc(33.333% - 40px);
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.palette-name {
+    text-align: right;
+    font-size: 0.8em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.color-container {
+    display: flex; 
+}
+
+.color {
+    color: #fff;
+    flex-grow: 1;
+    height: 150px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0; 
+}
+
+.color span {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: #fff;
+    font-size: 50%; 
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.color.shade-of-white {
+  color: #000; 
+}
+
+.color:hover {
+    filter: brightness(70%); 
+}
+.color:hover span {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+    .palette {
+        flex-basis: calc(50% - 40px);
+    }
+
+}
+
+@media (max-width: 600px) {
+    .palette {
+        flex-basis: calc(100% - 40px); 
+    }
+
+}
+
+/* copy popup */
+#copyAlert {
+    visibility: hidden;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: visibility 0.3s, opacity 0.3s;
+}
+
+#copyAlert.show {
+    visibility: visible;
+    opacity: 1;
+}
+
