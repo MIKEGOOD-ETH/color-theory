@@ -1,21 +1,25 @@
 body {
     font-family: 'Nunito', sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #1F1D29;
     color: #EFF2FA;
     line-height: 1.6;
-}
 
+}
 
 body h1 {
-    font-size: 3rem;
+    font-size: 5rem;
+    margin-bottom: 0px;
 }
+
+.header img {
+    max-height: 80px;
+
+}
+
 
     .header {
     text-align: center;
     padding: 20px;
-    padding-bottom: 0;
     max-width: 800px;
     margin: 0 auto; 
     font-size: 1.5rem;
@@ -34,7 +38,6 @@ a {
     color: inherit; 
 }
 
-
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -43,11 +46,11 @@ a {
 }
 
 .palette {
-    flex-basis: calc(33.333% - 40px);
-    margin: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
+    margin: 10px;
+    flex-basis: calc(33.333% - 40px); /* Default style for larger screens */
 }
 
 .palette-name {
@@ -97,17 +100,18 @@ a {
     opacity: 1;
 }
 
-/* responsive */
+/* Style for medium screens (tablets) */
 @media (max-width: 1000px) {
     .palette {
-        flex-basis: calc(50% - 40px);
+        flex-basis: calc(50% - 40px); /* Adjusts to 2 columns */
     }
 
 }
 
+/* Style for mobile screens */
 @media (max-width: 600px) {
     .palette {
-        flex-basis: calc(100% - 40px); 
+        flex-basis: calc(100% - 40px); /* Adjusts to 1 column */
     }
 
 }
